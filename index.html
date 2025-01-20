@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Yati ❤️</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 10%;
+            background-color: #fce4ec;
+            color: #333;
+        }
+        h1 {
+            color: #e91e63;
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+        }
+        .yes-button {
+            background-color: #4caf50;
+            color: white;
+        }
+        .no-button {
+            background-color: #f44336;
+            color: white;
+        }
+        #message {
+            margin-top: 30px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .hearts {
+            font-size: 36px;
+            color: #e91e63;
+        }
+    </style>
+</head>
+<body>
+    <h1>Yati, will you be mine forever? ❤️</h1>
+    <button class="yes-button" onclick="showMessage('yes')">Yes</button>
+    <button class="no-button" onclick="showMessage('no')">No</button>
+    <div id="message"></div>
+
+    <script>
+        function showMessage(answer) {
+            const messageElement = document.getElementById('message');
+            if (answer === 'yes') {
+                let sorryMessage = '';
+                for (let i = 0; i < 100; i++) {
+                    sorryMessage += 'I am sorry ❤️<br>';
+                }
+                messageElement.innerHTML = "<div class='hearts'>❤️❤️❤️</div><p>" + sorryMessage + "</p>";
+            } else if (answer === 'no') {
+                messageElement.innerHTML = "<p>Goodbye 😔</p>";
+                messageElement.style.color = "gray";
+            }
+        }
+    </script>
+</body>
+</html>
